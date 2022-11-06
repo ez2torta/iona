@@ -45,7 +45,42 @@ JVS Sense o---o---VVVV---o D3    A6 o-o---o---|==|-------o o---o 5V
 ```
 Of course, all GNDs should be connected together.
 ```
- JVC GND o---o---o JAMMA GND
+
+1P input = Arduino Pin = DB15 Pin
+UP = D4 = 15
+DOWN  = D5 = 17
+LEFT = D6 = 14
+RIGHT = D7 = 6
+B1 = D8 = 13
+B2 = D14 = 5
+B3 = D10 = 12
+B4 = D11 = 4
+Test = D12 = 9 (Not Used)
+Coin = A3 = 3
+Start = A2 = 11
+B5 = A1 = 10
+B6 = A0 = 2
+5V = 5V/AREF = 8
+GND = GND = 1
+
+
+
+2P input = Arduino Pin = DB15 Pin
+UP = D22 = 15
+DOWN  = 15 = 17
+LEFT = D16 = 14
+RIGHT = D17 = 6
+B1 = D18 = 13
+B2 = D19 = 5
+B3 = D20 = 12
+B4 = D21 = 4
+Test = D12 = 9 (Not Used)
+Coin = A3 = 3
+Start = D24 = 11
+B5 = D2 = 10
+B6 = D3 = 2
+5V = 5V/AREF = 8
+GND = GND = 1 JVC GND o---o---o JAMMA GND
              |
       Arduino Nano  GND
 ```
@@ -82,3 +117,43 @@ with NanoSenseClientSupportingDaisyChain            with NanoSenseClient
 RC Low Pass Filter is still needed to generate the intermediate voltage between
 D3 and Sense as we do for the single node circuit.
 You may want to insert small Rs for each RX0 and D2 to protect circuits.
+
+
+***TortitaUpdate***
+DB15 Schematic for 1P and 2P Inputs (Using Mega2560)
+
+1P input = Arduino Pin = DB15 Pin
+UP = D4 = 15
+DOWN  = D5 = 17
+LEFT = D6 = 14
+RIGHT = D7 = 6
+B1 = D8 = 13
+B2 = D14 = 5
+B3 = D10 = 12
+B4 = D11 = 4
+Test = D12 = 9 (Not Used)
+Coin = A3 = 3
+Start = A2 = 11
+B5 = A1 = 10
+B6 = A0 = 2
+5V = 5V/AREF = 8
+GND = GND = 1
+
+
+
+2P input = Arduino Pin = DB15 Pin
+UP = D22 = 15
+DOWN  = 15 = 17
+LEFT = D16 = 14
+RIGHT = D17 = 6
+B1 = D18 = 13
+B2 = D19 = 5
+B3 = D20 = 12
+B4 = D21 = 4
+Test = D12 = 9 (Not Used)
+Coin = A3 = 3
+Start = D24 = 11
+B5 = D2 = 10
+B6 = D3 = 2
+5V = 5V/AREF = 8
+GND = GND = 1
