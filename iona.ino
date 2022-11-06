@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 // Define one of following USE_*.
-//#define USE_NANO
+// #define USE_NANO
 #define USE_MEGA
 
 #if defined(USE_NANO)
@@ -34,7 +34,7 @@ MegaLedClient led;
 const int pins[] = {
   12, A3,
   A2,  4,  5,  6,  7,  8, 14, 10, 11, A1, A0,  // Use 14 instead of 9 as 9 is used for SENSE.
-  13, 14, 15, 16, 17, 18, 19, 20, 21,  2,  3,  // Use 13..21 and 2..3 for 2P buttons.
+  24, 22, 15, 16, 17, 18, 19, 20, 21,  2,  3,  // Use 13..21 and 2..3 for 2P buttons.
 };
 #endif  // defined(USE_MEGA)
 
@@ -43,7 +43,7 @@ JVSIO io(&data, &sense, &led);
 
 // Some NAOMI games expects the first segment starts with "SEGA ENTERPRISES,LTD.".
 // E.g. one major official I/O board is "SEGA ENTERPRISES,LTD.;I/O 838-13683B;Ver1.07;99/16".
-static const char io_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-NANO;ver1.01;Normal Mode";
+static const char io_id[] = "No Brand;NAOMI Converter98701;ver1.0";
 static const char suchipai_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-NANO;Ver1.01;Su Chi Pai Mode";
 static const char virtualon_id[] = "SEGA ENTERPRISES,LTD.compat;IONA-NANO;Ver1.01;Virtual-On Mode";
 uint8_t ios[5] = { 0x00, 0x00, 0x00, 0x00, 0x00 };
